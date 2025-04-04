@@ -1,85 +1,97 @@
-/* Importação da fonte correta */
-@import url('https://fonts.cdnfonts.com/css/tt-hoves-pro-trial');
+/* Importa o estilo principal */ 
+@import url('style.css');
 
-* {
+/* Importa a fonte personalizada */
+@font-face {
+    font-family: 'MinhaFonte';
+    src: url('../fonts/minha-fonte.ttf') format('truetype');
+}
+
+/* Aplica a fonte apenas na página inicial */
+body.home .titulo-inicio,
+body.home .destaque-inicio,
+body.home .paragrafo-inicio {
+    font-family: 'MinhaFonte', sans-serif;
+}
+
+
+/* Define o fundo preto e o texto branco apenas na página inicial */
+body.home {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-:root {
-    --font-primaria: 'TT Hoves Pro Trial', sans-serif;
-    --color-black: #000;
-    --color-gray: #9c9d9d;
-    --color-white: #ffffff;
-}
+/* ========================== */
+/*        CABEÇALHO          */
+/* ========================== */
 
-/*************** HEADER ***************/
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 95px; /* Aumentado em 5% */
-    background-color: var(--color-white);
+    background-color: #fff;
+    padding: 15px 0;
     display: flex;
-    align-items: center;
     justify-content: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 100;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .nav-menu {
     display: flex;
-    gap: 2.5rem;
+    gap: 30px;
 }
 
 .nav-menu a {
     text-decoration: none;
-    font-family: var(--font-primaria);
-    font-size: 1.4rem;
-    color: var(--color-black);
-    font-weight: 600;
-    transition: color 0.3s ease-in-out;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
 }
 
 .nav-menu a:hover {
-    color: #e7fc00;
+    background-color: red;
+    color: white;
 }
 
-/*************** INÍCIO ***************/
-.inicio {
-    width: 100%;
-    height: 100vh;
-    background-color: var(--color-black);
-    color: var(--color-white);
+/* ========================== */
+/*          INÍCIO           */
+/* ========================== */
+
+.container-inicio {
+    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    text-align: center;
-    padding: 0 20px;
-    margin-top: 95px; /* Ajuste para compensar o header fixo */
+    align-items: center;
+    height: 100vh;
 }
 
-/* Título principal */
+/* Mantém o texto branco na Home */
+body.home .titulo-inicio,
+body.home .destaque-inicio,
+body.home .paragrafo-inicio {
+    color: white;
+}
+
 .titulo-inicio {
-    font-size: 4rem;
-    font-family: var(--font-primaria);
-    font-weight: 700; /* Negrito */
+    font-size: 3rem;
+    font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
-/* Nome destacado */
 .destaque-inicio {
-    font-weight: 300; /* Fino */
-    font-size: 3rem;
-    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: normal;
+    letter-spacing: 1px;
 }
 
-/* Parágrafo */
 .paragrafo-inicio {
-    font-size: 1.5rem;
-    font-family: var(--font-primaria);
-    font-weight: 300;
+    font-size: 1.2rem;
+    font-weight: lighter;
+    margin-top: 10px;
+}

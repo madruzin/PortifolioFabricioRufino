@@ -1,0 +1,64 @@
+/* Importa o estilo principal */
+@import url('style.css');
+
+/* Define o fundo preto e o texto branco */
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Centraliza o conteúdo da página */
+.main-curriculo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Estiliza o container do currículo */
+.curriculo-container {
+    background-color: rgba(20, 20, 20, 0.9); /* Preto suave */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.5);
+    max-width: 900px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Estiliza os títulos */
+.titulo-curriculo {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.experiencia h2 {
+    color: #ff0000; /* Vermelho */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Estiliza os parágrafos */
+.paragrafo-curriculo, .experiencia p {
+    color: #fff; /* Texto branco */
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .titulo-curriculo {
+        font-size: 1.8rem;
+    }
+
+    .paragrafo-curriculo {
+        font-size: 1rem;
+    }
+
+    .curriculo-container {
+        padding: 20px;
+    }
+}
