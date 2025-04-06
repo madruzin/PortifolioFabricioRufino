@@ -1,21 +1,25 @@
-/* Importa o estilo principal */ 
 @import url('style.css');
 
-/* Importa a fonte personalizada */
+
 @font-face {
     font-family: 'MinhaFonte';
     src: url('../fonts/minha-fonte.ttf') format('truetype');
 }
 
-/* Aplica a fonte apenas na página inicial */
-body.home .titulo-inicio,
-body.home .destaque-inicio,
-body.home .paragrafo-inicio {
-    font-family: 'MinhaFonte', sans-serif;
+
+.titulo-inicio {
+    color: red;
+}
+
+.destaque-inicio {
+    color: rgb(255, 255, 255);
+}
+
+.paragrafo-inicio {
+    color: #ffffff;
 }
 
 
-/* Define o fundo preto e o texto branco apenas na página inicial */
 body.home {
     background-color: #000;
     color: #fff;
@@ -23,10 +27,6 @@ body.home {
     margin: 0;
     padding: 0;
 }
-
-/* ========================== */
-/*        CABEÇALHO          */
-/* ========================== */
 
 .header {
     background-color: #fff;
@@ -57,10 +57,6 @@ body.home {
     color: white;
 }
 
-/* ========================== */
-/*          INÍCIO           */
-/* ========================== */
-
 .container-inicio {
     text-align: center;
     display: flex;
@@ -70,12 +66,6 @@ body.home {
     height: 100vh;
 }
 
-/* Mantém o texto branco na Home */
-body.home .titulo-inicio,
-body.home .destaque-inicio,
-body.home .paragrafo-inicio {
-    color: white;
-}
 
 .titulo-inicio {
     font-size: 3rem;
@@ -94,4 +84,17 @@ body.home .paragrafo-inicio {
     font-size: 1.2rem;
     font-weight: lighter;
     margin-top: 10px;
+}
+
+footer {
+    background-color: #e0e0e0;
+    padding: 20px;
+    width: 100vw;
+    font-size: 14px;
+    color: #000000;
+    margin-top: 40px;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    bottom: 0;
+    text-align: center; 
 }

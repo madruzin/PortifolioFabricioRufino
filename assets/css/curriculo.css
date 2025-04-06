@@ -1,13 +1,30 @@
-/* Importa o estilo principal */
-@import url('style.css');
 
-/* Define o fundo preto e o texto branco */
-body {
-    background-color: #000;
-    color: #fff;
+
+@font-face {
+    font-family: 'MinhaFonte';
+    src: url('../fonts/minha-fonte.ttf') format('truetype');
 }
 
-/* Centraliza o conteúdo da página */
+
+
+
+body.home {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #fff;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
 .main-curriculo {
     display: flex;
     flex-direction: column;
@@ -17,9 +34,28 @@ body {
     padding: 50px 20px;
 }
 
-/* Estiliza o container do currículo */
+.nav-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-menu a:hover {
+    background-color: red;
+    color: white;
+}
+
 .curriculo-container {
-    background-color: rgba(20, 20, 20, 0.9); /* Preto suave */
+    background-color: rgba(20, 20, 20, 0.9);
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.5);
@@ -28,27 +64,27 @@ body {
     margin-top: 20px;
 }
 
-/* Estiliza os títulos */
+
 .titulo-curriculo {
     font-size: 2rem;
-    color: #fff;
+    color: #ff0303;
     margin-bottom: 20px;
 }
 
 .experiencia h2 {
-    color: #ff0000; /* Vermelho */
+    color: #ff0000; 
     font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
-/* Estiliza os parágrafos */
+
 .paragrafo-curriculo, .experiencia p {
-    color: #fff; /* Texto branco */
+    color: #fff; 
     font-size: 1.2rem;
     margin-bottom: 10px;
 }
 
-/* Responsividade */
+
 @media (max-width: 768px) {
     .titulo-curriculo {
         font-size: 1.8rem;
@@ -61,4 +97,17 @@ body {
     .curriculo-container {
         padding: 20px;
     }
+}
+
+footer {
+    background-color: #e0e0e0;
+    padding: 20px;
+    width: 100vw;
+    font-size: 14px;
+    color: #000000;
+    margin-top: 40px;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    bottom: 0;
+    text-align: center; 
 }
